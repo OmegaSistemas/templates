@@ -1,0 +1,51 @@
+{
+  "name": "vite-react",
+  "private": true,
+  "description": "Descrição do projeto",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --cache --fix --ignore-path ./.eslintignore",
+    "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
+    "lint": "yarn lint:format && yarn lint:fix",
+    "postinstall": "husky install"
+    
+  },
+  "dependencies": {
+    "@babel/eslint-parser": "^7.18.2",
+    "@vitejs/plugin-legacy": "^1.8.2",
+    "axios": "^0.27.2",
+    "axios-extensions": "^3.1.3",
+    "classnames": "^2.3.1",
+    "omega-react-ui": "latest",
+    "omega-ui": "latest",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-table": "6.8.6",
+    "regenerator-runtime": "^0.13.9",
+    "sass": "^1.53.0"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.18.6",
+    "@rollup/plugin-alias": "^3.1.9",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "@vitejs/plugin-react": "^1.3.2",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx": "^0.1.0",
+    "eslint-plugin-jsx-a11y": "^6.6.0",
+    "eslint-plugin-prettier": "^4.1.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
+    "vite": "^2.9.13",
+    "vite-plugin-babel": "^1.1.0",
+    "vite-plugin-pwa": "^0.12.0"
+  }
+}
