@@ -4,6 +4,7 @@
   "description": "Descrição do projeto",
   "version": "0.0.1",
   "scripts": {
+    "start": "echo 'Use yarn dev'",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
