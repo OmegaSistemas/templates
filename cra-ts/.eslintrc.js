@@ -1,7 +1,7 @@
 module.exports = {
     env: {
         browser: true,
-        es2021: true
+        es2021: true,
     },
     extends: [
         "eslint:recommended",
@@ -20,7 +20,7 @@ module.exports = {
         "import/resolver": {
             node: {
                 paths: ["src"],
-                extensions: [".js", ".jsx"],
+                extensions: [".js", ".jsx", ".ts", ".tsx"],
             },
         },
     },
@@ -42,7 +42,7 @@ module.exports = {
         "react/react-in-jsx-scope": "off",
         "array-bracket-spacing": [1, "never"],
         "block-scoped-var": 0,
-        "react/jsx-filename-extension": ["warn", { extensions: [".js", ".jsx"] }],
+        "react/jsx-filename-extension": ["warn", { extensions: [".tsx", ".jsx"] }],
         "import/prefer-default-export": "off",
         "prettier/prettier": ["error", {}, { usePrettierrc: true }],
         "jsx-a11y/accessible-emoji": "off",

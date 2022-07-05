@@ -1,5 +1,6 @@
 import "./App.scss";
 
+import { Button } from "omega-react-ui";
 import { useState } from "react";
 
 import logo from "./logo.svg";
@@ -13,9 +14,7 @@ function App() {
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>Hello Vite + React + Omega!</p>
                 <p>
-                    <button type="button" onClick={() => setCount((count) => count + 1)}>
-                        count is: {count}
-                    </button>
+                    <Button onClick={() => setCount((count) => count + 1)}>count is: {count}</Button>
                 </p>
                 <p>
                     Edit <code>App.jsx</code> and save to test HMR updates.
