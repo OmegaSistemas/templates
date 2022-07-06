@@ -16,7 +16,7 @@ const flags = {
     template: {
         type: `string`,
         alias: `t`,
-        desc: `Nome do template, por padrão é utilizado o 'cra-ts'`,
+        desc: `Nome do template, por padrão é utilizado o 'cra-ts' (cra-ts, vite-react)`,
         default: "cra-ts",
     },
 };
