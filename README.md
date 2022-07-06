@@ -3,7 +3,7 @@
 Pacote utilitário para aplicações utilizadas na [omega sistemas](https://omegasistemas.net.br).
 
 ```sh
-npx @omegaeduc/obiwan@latest
+npx @omegaeduc/obiwan@latest --help
 ```
 
 ## ⤴️ Motivação
