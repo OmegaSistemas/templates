@@ -1,7 +1,7 @@
 {
   "name": "@omegaeduc/obiwan",
   "description": "Projeto para start de aplicações react",
-  "version": "0.0.3-beta5",
+  "version": "0.0.3-beta6",
   "license": "MIT",
   "bin": {
     "obiwan": "./index.js"
