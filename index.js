@@ -21,9 +21,15 @@ const { clear, debug } = flags;
     input.includes(`help`) && cli.showHelp(0);
     debug && debugLog(flags);
     console.log(input);
-    if (input.includes("create")) {
-        actions.reactCreate(__dirname, options.template);
-    } else {
-        msg("error", "Informe uma opção, atualmente apenas está disponível 'create'");
+    
+    switch (input[0]) {
+        case "create": {
+            const folder = input[1] ?? flags.template;
+            actions.reactCreate(`${__dirname}/${folder}`, flags.template);
+            break;
+        }
+        default: {
+            msg("error", "Informe uma opção, atualmente apenas está disponível 'create'");
+        }
     }
 })();
