@@ -7,11 +7,11 @@
  * @author Team Web - Omega Sistemas <https://github.com/OmegaSistemas>
  */
 
-const init = require("./src/utils/init");
-const cli = require("./src/utils/cli");
-const debugLog = require("./src/utils/debug");
-const msg = require("./src/utils/msg");
-const actions = require("./src/actions");
+const init = require("./bin/utils/init");
+const cli = require("./bin/utils/cli");
+const debugLog = require("./bin/utils/debug");
+const msg = require("./bin/utils/msg");
+const actions = require("./bin/actions");
 const input = cli.input
 const flags = cli.flags;
 const { clear, debug } = flags;
@@ -20,7 +20,6 @@ const { clear, debug } = flags;
     init({ clear });
     input.includes(`help`) && cli.showHelp(0);
     debug && debugLog(flags);
-    console.log(input);
     
     switch (input[0]) {
         case "create": {
