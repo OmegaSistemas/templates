@@ -1,2 +1,3 @@
 # templates
-Scaffolding dos projetos web 
+
+Scaffolding dos projetos web

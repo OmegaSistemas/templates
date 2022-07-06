@@ -15,7 +15,7 @@ module.exports = {
         alias: {
             "@": path.resolve(__dirname, "src", ""),
         },
-        configure (webpackConfig) {
+        configure(webpackConfig) {
             if (!webpackConfig.ignoreWarnings) {
                 webpackConfig.ignoreWarnings = [];
             }

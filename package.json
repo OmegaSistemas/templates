@@ -1,10 +1,10 @@
 {
   "name": "@omegaeduc/obiwan",
   "description": "Projeto para start de aplicações react",
-  "version": "0.0.3",
+  "version": "0.0.3-beta1",
   "license": "MIT",
   "bin": {
-    "@omegaeduc/obiwan": "./index.js"
+    "obiwan": "./index.js"
   },
   "author": {
     "name": "Team Web - Omega Sistemas",
@@ -23,21 +23,17 @@
     "registry": "http://192.168.5.90:8083/repository/npm-publish/"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.6",
     "@babel/eslint-parser": "^7.18.2",
     "eslint": "^8.18.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx": "^0.1.0",
-    "eslint-plugin-jsx-a11y": "^6.6.0",
     "eslint-plugin-prettier": "^4.1.0",
-    "eslint-plugin-react": "^7.30.1",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1"
   },
   "scripts": {
-    "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --cache --fix --ignore-path ./.eslintignore",
+    "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --cache --fix --ignore-path ./.eslintignore --resolve-plugins-relative-to .",
     "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
     "lint": "yarn lint:format && yarn lint:fix",
     "prepare": "husky install"
