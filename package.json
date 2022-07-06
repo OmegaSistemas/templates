@@ -1,19 +1,29 @@
 {
-  "name": "obiwan-cli",
-  "version": "0.0.1",
+  "name": "@omegaeduc/obiwan",
   "description": "Projeto para start de aplicações react",
-  "main": "index.js",
-  "repository": "https://github.com/OmegaSistemas/templates",
-  "author": "kiver <kiver@omegasistemas.net.br>",
+  "version": "0.0.3",
   "license": "MIT",
-  "private": true,
   "bin": {
-    "create": "./index.js"
+    "@omegaeduc/obiwan": "./index.js"
+  },
+  "author": {
+    "name": "Team Web - Omega Sistemas",
+    "email": "kiver@omegasistemas.net.br",
+    "url": "https://github.com/OmegaSistemas"
+  },
+  "keywords": [
+    "@omegaeduc/obiwan",
+    "Team Web - Omega Sistemas"
+  ],
+  "files": [
+    "index.js",
+    "utils"
+  ],
+  "publishConfig": {
+    "registry": "http://192.168.5.90:8083/repository/npm-publish/"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.18.2",
-    "commander": "^9.3.0",
-    "degit": "^2.8.4",
     "eslint": "^8.18.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
@@ -33,6 +43,14 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "chalk": "^4.1.2",
+    "cli-alerts": "^1.2.2",
+    "cli-handle-error": "^4.4.0",
+    "cli-handle-unhandled": "^1.1.1",
+    "cli-meow-help": "^3.1.0",
+    "cli-welcome": "^2.2.2",
+    "degit": "^2.8.4",
+    "meow": "^9.0.0",
     "shelljs": "^0.8.5"
   }
 }
