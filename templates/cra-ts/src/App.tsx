@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { Button } from "omega-react-ui";
+import { Button } from "omega-react-ui/@forms/buttons";
 import { useState } from "react";
 
 import logo from "./logo.svg";

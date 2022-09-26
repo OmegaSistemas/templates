@@ -9,6 +9,7 @@ module.exports = {
         "plugin:react/jsx-runtime",
         "plugin:@typescript-eslint/recommended",
         "plugin:jsx-a11y/recommended",
+        "plugin:react-hooks/recommended",
         "plugin:prettier/recommended", // Make sure this is always the last element in the array.
     ],
     settings: {
@@ -24,7 +25,7 @@ module.exports = {
             },
         },
     },
-    plugins: ["react", "simple-import-sort", "@typescript-eslint", "prettier"],
+    plugins: ["react", "@typescript-eslint", "prettier", "eslint-plugin-import-helpers"],
     parser: "@typescript-eslint/parser",
     parserOptions: {
         ecmaFeatures: {
@@ -39,6 +40,8 @@ module.exports = {
         requireConfigFile: false,
     },
     rules: {
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
         "react/react-in-jsx-scope": "off",
         "array-bracket-spacing": [1, "never"],
         "block-scoped-var": 0,
@@ -47,14 +50,23 @@ module.exports = {
         "prettier/prettier": ["error", {}, { usePrettierrc: true }],
         "jsx-a11y/accessible-emoji": "off",
         "react/prop-types": "off",
-        "simple-import-sort/imports": "error",
-        "simple-import-sort/exports": "error",
         "jsx-a11y/anchor-is-valid": [
             "error",
             {
                 components: ["Link"],
                 specialLink: ["hrefLeft", "hrefRight"],
                 aspects: ["invalidHref", "preferButton"],
+            },
+        ],
+        "@typescript-eslint/no-namespace": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "import-helpers/order-imports": [
+            "warn",
+            {
+                // example configuration
+                newlinesBetween: "always",
+                groups: ["/^react/", "module", "/^react-icons/", "/^omega-/", "/^@/", ["parent", "sibling", "index"]],
+                alphabetize: { order: "asc", ignoreCase: true },
             },
         ],
     },

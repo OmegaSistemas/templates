@@ -1,6 +1,5 @@
 @import "~omega-ui/scss/variables";
 @import "~omega-ui/scss/omgDefault.scss";
-@import "~omega-react-ui/all.scss";
 
 body {
     margin: 0;
@@ -12,4 +11,14 @@ body {
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+
+html {
+    min-height: 100%;
+
+    body,
+    #root {
+        min-height: 100%;
+    }
 }

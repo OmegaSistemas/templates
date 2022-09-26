@@ -2,3 +2,6 @@ build
 bin
 __mocks__
 serviceWorker.js
+*.config*
+*.scss
+*.*rc*
