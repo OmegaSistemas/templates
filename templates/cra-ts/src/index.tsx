@@ -4,6 +4,7 @@ import "omega-ui";
 import ReactDOM from "react-dom/client";
 
 import getClarityApi from "utils/getClarityApi";
+
 import * as Sentry from "@sentry/browser";
 
 import "./i18n";
