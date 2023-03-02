@@ -1,8 +1,0 @@
-{
-    "*.{js,jsx,ts,tsx,json}": [
-        "yarn lint"
-    ],
-    "*.{scss,css}": [
-        "yarn lint:format"
-    ]
-}
