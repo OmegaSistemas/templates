@@ -2,7 +2,7 @@ import "./App.css";
 
 import { useState } from "react";
 
-import { Button } from "omega-react-ui/@forms/buttons";
+import { Button } from "omega-react-ui";
 
 import logo from "./logo.svg";
 
@@ -17,7 +17,7 @@ function App() {
                     <Button onClick={() => setCount((count) => count + 1)}>count is: {count}</Button>
                 </p>
                 <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
+                    Edit <code>src/components/App.tsx</code> and save to reload.
                 </p>
                 <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
                     Learn React
