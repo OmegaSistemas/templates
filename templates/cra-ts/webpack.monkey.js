@@ -23,7 +23,7 @@ module.exports = function (webpackConfig, isDevelopment) {
             rule.options = {
                 ...rule.options,
                 ...loaderOptions,
-            }
+            };
             return index;
         }
     });
@@ -31,6 +31,9 @@ module.exports = function (webpackConfig, isDevelopment) {
     webpackConfig.resolve.alias = {
         ...webpackConfig.resolve.alias,
         "@": path.resolve(__dirname, "src", ""),
+        // Problema de exportação da ./node_modules/axios/lib/helpers/buildURL
+        // Discussão: https://github.com/axios/axios/pull/5136#issuecomment-1289042917
+        "axios/lib": path.resolve(__dirname, "./node_modules/axios/lib"),
     };
 
     if (!webpackConfig.ignoreWarnings) {

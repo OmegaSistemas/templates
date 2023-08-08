@@ -8,7 +8,7 @@ import getClarityApi from "utils/getClarityApi";
 import * as Sentry from "@sentry/browser";
 
 import "./i18n";
-import App from "./App";
+import App from "./components/App";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
@@ -37,8 +37,11 @@ if (process.env.NODE_ENV !== "development") {
             },
         });
     }
-    if (process.env.REACT_APP_CLARITY_API !== "") {
-        getClarityApi(process.env.REACT_APP_CLARITY_API);
+
+    const clarityApiUrl = process.env.REACT_APP_CLARITY_API;
+
+    if (clarityApiUrl && clarityApiUrl !== "") {
+        getClarityApi(clarityApiUrl);
     }
 }
 
